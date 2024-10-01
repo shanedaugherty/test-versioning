@@ -1,3 +1,10 @@
+# [1.2.0-staging.2](https://github.com/shanedaugherty/test-versioning/compare/v1.2.0-staging.1...v1.2.0-staging.2) (2024-10-01)
+
+
+### Bug Fixes
+
+* libs and apps ([7707cb9](https://github.com/shanedaugherty/test-versioning/commit/7707cb96d11cb89725c9fc1f20c18b2624fbe21d))
+
 # [1.1.0](https://github.com/shanedaugherty/test-versioning/compare/v1.0.0...v1.1.0) (2024-10-01)
 
 

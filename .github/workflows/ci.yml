@@ -39,9 +39,7 @@ jobs:
           cache: 'yarn'
           registry-url: 'https://npm.pkg.github.com/'
 
-#      - run: yarn config set -H enableImmutableInstalls false
       - run: yarn
-#      - run: YARN_ENABLE_IMMUTABLE_INSTALLS=false yarn
 
       - uses: nrwl/nx-set-shas@v4
 

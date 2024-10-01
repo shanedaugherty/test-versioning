@@ -1,3 +1,18 @@
+# [1.2.0](https://github.com/shanedaugherty/test-versioning/compare/v1.1.0...v1.2.0) (2024-10-01)
+
+
+### Bug Fixes
+
+* libs and apps ([7707cb9](https://github.com/shanedaugherty/test-versioning/commit/7707cb96d11cb89725c9fc1f20c18b2624fbe21d))
+
+
+### Features
+
+* add a lib, for fun ([ce17a22](https://github.com/shanedaugherty/test-versioning/commit/ce17a225fddc964930814aead7cdf6e2b0cbb1ab))
+* dynamic apps and libs dirs ([56001b4](https://github.com/shanedaugherty/test-versioning/commit/56001b42a00a5b824eb183b4f3928fc0a2a134b8))
+* remove thing why is it not working ([260a35c](https://github.com/shanedaugherty/test-versioning/commit/260a35c5e8cb68da183305f4e9a52d9159754e0a))
+* remove thing why is it not working ([3b9cae3](https://github.com/shanedaugherty/test-versioning/commit/3b9cae39734eeca498233c2bcacf3fb66ed3da63))
+
 # [1.2.0-staging.2](https://github.com/shanedaugherty/test-versioning/compare/v1.2.0-staging.1...v1.2.0-staging.2) (2024-10-01)
 
 

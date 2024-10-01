@@ -2,7 +2,7 @@
   "name": "@test-versioning/source",
   "license": "MIT",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.1.0-staging.1",
   "author": "Thebest!",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"

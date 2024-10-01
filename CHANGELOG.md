@@ -1,3 +1,10 @@
+# [1.1.0-staging.1](https://github.com/shanedaugherty/test-versioning/compare/v1.0.0...v1.1.0-staging.1) (2024-10-01)
+
+
+### Features
+
+* add author ([1ac4a43](https://github.com/shanedaugherty/test-versioning/commit/1ac4a4330523b956aacac531099f7e531eb58077))
+
 # 1.0.0 (2024-10-01)
 
 

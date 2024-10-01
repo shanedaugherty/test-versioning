@@ -49,10 +49,6 @@ jobs:
           git config --global user.email "engineering-bot@ilanthealth.com"
           git config --global user.name "Engineering Bot"
 
-      - run: git fetch
-      - run: git pull
-      - run: git reset --hard origin/${{ github.ref_name }}
-
       - name: Set next version number
         run: npm_config_loglevel=verbose yarn release
         env:

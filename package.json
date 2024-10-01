@@ -3,6 +3,7 @@
   "license": "MIT",
   "private": true,
   "version": "1.0.0",
+  "author": "Thebest!",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },

@@ -1,3 +1,10 @@
+# [1.1.0-staging.3](https://github.com/shanedaugherty/test-versioning/compare/v1.1.0-staging.2...v1.1.0-staging.3) (2024-10-01)
+
+
+### Bug Fixes
+
+* version sync ([9ad20ed](https://github.com/shanedaugherty/test-versioning/commit/9ad20ede8529bb4afe5cd4a2074665925d286349))
+
 # [1.1.0-staging.2](https://github.com/shanedaugherty/test-versioning/compare/v1.1.0-staging.1...v1.1.0-staging.2) (2024-10-01)
 
 

@@ -1,3 +1,10 @@
+# [1.1.0-staging.2](https://github.com/shanedaugherty/test-versioning/compare/v1.1.0-staging.1...v1.1.0-staging.2) (2024-10-01)
+
+
+### Bug Fixes
+
+* remove weird thing ([779e177](https://github.com/shanedaugherty/test-versioning/commit/779e1775a3bb391e2fb197bef2ae02f4f3ebf592))
+
 # [1.1.0-staging.1](https://github.com/shanedaugherty/test-versioning/compare/v1.0.0...v1.1.0-staging.1) (2024-10-01)
 
 

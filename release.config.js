@@ -8,7 +8,6 @@ const libPackageJsons = require('./tools/app-names').map(
 
 console.log({appPackageJsons, libPackageJsons})
 
-
 module.exports = {
     pkgRoot: `./`,
     tagFormat: 'v${version}',

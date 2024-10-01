@@ -1,0 +1,79 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - staging
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+  issues: write
+  packages: write
+  actions: read
+
+
+jobs:
+  main:
+    permissions:
+      contents: write
+      actions: read
+      issues: write
+      packages: write
+
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # Cache node_modules!
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'yarn'
+          registry-url: 'https://npm.pkg.github.com/'
+
+#      - run: yarn config set -H enableImmutableInstalls false
+      - run: yarn
+#      - run: YARN_ENABLE_IMMUTABLE_INSTALLS=false yarn
+
+      - uses: nrwl/nx-set-shas@v4
+
+      - run: |
+          git config --global user.email "engineering-bot@ilanthealth.com"
+          git config --global user.name "Engineering Bot"
+
+      - run: git fetch
+      - run: git pull
+      - run: git reset --hard origin/${{ github.ref_name }}
+
+      - name: Set next version number
+        run: npm_config_loglevel=verbose yarn release
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
+
+      - run: YARN_ENABLE_IMMUTABLE_INSTALLS=false yarn
+
+      - name: Get package.json version
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@v1.3.1
+
+      - run: git add . || true
+      - run: 'git commit -m "chore(release): v${{ steps.package-version.outputs.current-version }} [skip ci]" || true'
+      - run: git push --all || true
+
+      - run: |
+          git fetch --all
+          git checkout staging
+          git rebase main
+          git push origin staging --force
+
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'

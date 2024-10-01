@@ -1,0 +1,9 @@
+{
+  "name": "test-versioning-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/test-versioning-e2e/src",
+  "tags": [],
+  "implicitDependencies": ["test-versioning"],
+  "// targets": "to see all targets run: nx show project test-versioning-e2e --web",
+  "targets": {}
+}

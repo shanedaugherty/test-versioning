@@ -1,3 +1,10 @@
+# 1.0.0 (2024-10-01)
+
+
+### Features
+
+* initial commit ([d4fedd8](https://github.com/shanedaugherty/test-versioning/commit/d4fedd8ddfb81f2f33345464db9cbef256b78ee6))
+
 # [1.4.0-staging.6](https://github.com/Ilant-Health/test-versioning/compare/v1.4.0-staging.5...v1.4.0-staging.6) (2024-10-01)
 
 

@@ -2,7 +2,7 @@
   "name": "@test-versioning/source",
   "license": "MIT",
   "private": true,
-  "version": "1.4.0-staging.6",
+  "version": "1.0.0",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },

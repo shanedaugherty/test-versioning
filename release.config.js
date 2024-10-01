@@ -1,9 +1,9 @@
 const appPackageJsons = require('./tools/lib-names').map(
-    (pkg) => `./libs/${pkg}/package.json`
+    (pkg) => `./apps/${pkg}/package.json`
 )
 
 const libPackageJsons = require('./tools/app-names').map(
-    (pkg) => `./apps/${pkg}/package.json`
+    (pkg) => `./libs/${pkg}/package.json`
 )
 
 console.log({appPackageJsons, libPackageJsons})

@@ -30,18 +30,22 @@ fs.writeFileSync(path.resolve(repoRoot, 'package.json'), JSON.stringify(rootPkg)
 exec(`npx prettier --write '${path.resolve(repoRoot, 'package.json')}'`);
 
 const libs = [...require('../lib-names')].map(
-  (name) => `../libs/${name}/package.json`
+  (name) => `./libs/${name}/package.json`
 );
 
-const apps = [...require('../app-names')].map((name) => `../apps/${name}/package.json`);
+const apps = [...require('../app-names')].map((name) => `./apps/${name}/package.json`);
 
-const updatePackageJson = async (path) => {
+const updatePackageJson = (path) => {
+  if (!fs.existsSync(path)) {
+    throw new Error(`Missing file ${path}`);
+  }
+
   try {
-    const current = await require(path);
+    const current = fs.readFileSync(path , 'utf8');
+    const currentJson = JSON.parse(current);
 
-    const next = updateDeps(current);
+    const next = updateDeps(currentJson);
 
-    // update version field
     next.version = rootPkg.version;
 
     fs.writeFileSync(path, JSON.stringify(next));
@@ -54,10 +58,7 @@ const updatePackageJson = async (path) => {
   } catch (ex) {}
 };
 
-Promise.all([...apps, ...libs].map((path) => updatePackageJson(path)))
-  .then(() => {
-    console.log('Synced all version numbers.');
-  })
-  .catch((error) => {
-    console.log(error);
-  });
+[...apps, ...libs].map((path) => updatePackageJson(path))
+
+console.log('Synced all version numbers.');
+
